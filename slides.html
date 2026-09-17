@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>美加日常會話 簡報版｜10主題×2天 3問+3答</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#0f172a;color:#e2e8f0;font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:10px 18px;background:#020617;color:#fff;position:sticky;top:0;z-index:10}
+.topbar button{background:#6d5ef0;color:#fff;border:none;border-radius:8px;padding:8px 14px;cursor:pointer;margin-left:6px}
+.stage{display:flex;justify-content:center;padding:18px}
+.slide{width:min(960px,94vw);aspect-ratio:16/9;background:#fff;color:#1e293b;border-radius:18px;padding:34px 40px;display:none;flex-direction:column;justify-content:center;box-shadow:0 10px 40px rgba(0,0,0,.4)}
+.slide.on{display:flex}
+.slide h1{font-size:34px;margin:0 0 4px}.slide h2{font-size:26px;margin:0 0 8px}
+.kicker{color:#6d5ef0;font-weight:800;font-size:15px;letter-spacing:1px}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:10px}
+.col{border-radius:12px;padding:12px 16px}.col.q{background:#eef2ff}.col.a{background:#ecfdf5}
+.en{font-size:21px;font-weight:800}.zh{font-size:15px;color:#475569}
+.combo{margin-top:12px;background:#fffbeb;border:2px solid #fbbf24;border-radius:10px;padding:8px 14px;font-size:16px;color:#78350f}
+.hint{color:#94a3b8;font-size:13px;margin-top:8px;text-align:center}
+.cover{text-align:center}.cover h1{font-size:44px;background:linear-gradient(90deg,#a78bfa,#22d3ee);-webkit-background-clip:text;background-clip:text;color:transparent}
+@media print{.topbar,.hint{display:none}body{background:#fff}.stage{display:block;padding:0}.slide{display:flex;border:1px solid #999;border-radius:0;width:100%;aspect-ratio:auto;min-height:90vh;page-break-after:always;box-shadow:none}}
+@media(max-width:700px){.cols{grid-template-columns:1fr}.slide{padding:20px;aspect-ratio:auto;min-height:70vh}.slide h1{font-size:26px}.en{font-size:18px}}
+</style>
+</head>
+<body>
+<div class="topbar"><div><b id="counter">1 / 23</b>　美加日常會話10主題×2天・簡報版（← → 換頁・F11投影・列印即PDF）</div><div><a href="index.html" style="color:#fff">◀ 回互動版</a> <button onclick="move(-1)">上一頁</button><button onclick="move(1)">下一頁 ▶</button><button onclick="window.print()">🖨 列印/PDF</button></div></div>
+<div class="stage" id="stage"></div>
+<div class="hint">Day1 已含 I'm doing well. / I'm doing okay.（考試安全牌）＋ Can't complain. / Not too bad.（更道地）・每頁右下可列印成一頁一張投影片PDF<br><span>👁 總訪客 <b data-visit-count="total">…</b> ｜ 今日 <b data-visit-count="today">…</b></span></div>
+<script>
+var SLIDES=[
+{cover:1,k:"US / CANADA AUTHENTIC TALK",h:"美加日常會話 10主題×2天",sub:"每天 3種問法 + 3種答法・任意配都對・每堂3–5分鐘<br>Day1 已含 <b>I'm doing well. / I'm doing okay.</b>（正式安全牌）"},
+{t:"T1-D1 基本問候",q:[["How's it going?","最近怎樣？"],["How are things?","最近如何？"],["How are you doing?","你最近好嗎？"]],a:[["Pretty good. You?","不錯耶。你呢？"],["I'm doing well.","我很好。（正式安全牌）"],["I'm doing okay.","我還不錯。"],["Can't complain.","沒什麼好抱怨的。"],["Not too bad, just busy.","還不錯，就是有點忙。"]],c:"任務：Q任一句 + A任一句。C群先背 Q1+A1/A2/A3。"},
+{t:"T1-D2 深入問候",q:[["How've you been?","最近好嗎？"],["How's your day going?","今天過得如何？"],["How's everything?","一切都好嗎？"]],a:[["Good. Busy, though.","不錯，就是忙。"],["Nothing new, really.","沒什麼新鮮事。"],["Doing well, thanks.","很好，謝謝。"]],c:"🔁 先複習D1任一組，再練D2。"},
+{t:"T2-D1 最近在幹嘛",q:[["What're you up to?","在忙啥？"],["What've you been up to?","這陣子忙啥？"],["What're you up to lately?","最近都在幹嘛？"]],a:[["Not much. Just relaxing.","就休息一下。"],["Nothing much. Just studying.","就讀書。"],["Just hanging out.","就晃晃聚聚。"]],c:"🔁 T1問候 + T2近況連問。"},
+{t:"T2-D2 週末版",q:[["What are you up to this weekend?","這週末幹嘛？"],["Anything fun lately?","最近有好玩的嗎？"],["Been up to anything fun?","有幹嘛好玩的嗎？"]],a:[["Probably just relax at home.","大概就在家休息。"],["Just grabbing coffee with Maya.","跟Maya拿咖啡。"],["Not really. Just staying in.","就待在家。"]],c:"🔁 T1 + T2-D2。"},
+{t:"T3-D1 店員問 / 你點",q:[["What can I get for you?","想點什麼？"],["What can I get started for you?","想先點什麼？"],["What would you like today?","今天想來點什麼？"]],a:[["Can I get a medium latte to go?","中杯拿鐵外帶。"],["Could I get a latte and a muffin to go?","拿鐵+瑪芬外帶（有禮）。"],["That's it. Thanks!","就這樣。謝謝！"]],c:"★ Can I get…to go? 必背。"},
+{t:"T3-D2 不用加點",q:[["Anything else?","還需要別的嗎？"],["Anything else for you?","還需要別的嗎？"],["Would you like anything else?","還想加點嗎？"]],a:[["No, that's it. How much?","就這樣。多少錢？"],["No worries. Just the latte.","沒事啦。只有拿鐵。"],["No, that's all. Thanks!","不用了，謝謝！"]],c:"★ 9種組合都對：Q任一句＋A任一句。"},
+{t:"T4-D1 好吃怎麼說",q:[["How was it?","覺得怎樣？"],["How'd you like it?","你喜歡嗎？"],["How was everything?","一切都好嗎？"]],a:[["It was so good.","超好吃。"],["It was exactly what I needed.","正是我想吃的。"],["I'm so full.","我吃得好飽。"]],c:"★ 別說very delicious，改so good。"},
+{t:"T4-D2 再訪/推薦",q:[["Would you come back?","還會再來嗎？"],["Is this place good?","這家好嗎？"],["Would you recommend it?","你會推薦嗎？"]],a:[["Definitely. Always good.","一定會。這家一直很好。"],["Worth every penny.","每分錢都值得。"],["We should come back soon!","該快點再來！"]],c:"🔁 T3點餐 + T4評價。"},
+{t:"T5-D1 多少錢",q:[["How much was it?","多少錢？"],["How much did it cost?","花了多少？"],["Was it expensive?","貴嗎？"]],a:[["About twenty dollars.","大概20塊錢。"],["I got it on sale. 50% off!","特價。五折！"],["That's a great deal!","很划算！"]],c:"★ dollar=元，on sale=特價中。"},
+{t:"T5-D2 約逛街",q:[["Do you want to go to the mall?","去逛百貨嗎？"],["Do you want to come with me?","跟我去嗎？"],["How about the mall on Saturday?","週六去百貨如何？"]],a:[["Sounds good! I'm in.","不錯！我去。"],["For sure! When?","當然！何時？"],["Okay! Text me later.","好！等會傳訊。"]],c:"🔁 T2 + T5：近況→逛街。"},
+{t:"T6-D1 週一問週末",q:[["How was your weekend?","週末如何？"],["How'd your weekend go?","週末過得如何？"],["Do anything fun?","有幹嘛好玩的嗎？"]],a:[["It was nice and relaxing.","輕鬆愉快。"],["I just stayed in.","就待在家。"],["I hung out with Alex.","跟Alex出去晃。"]],c:"★ stayed in 不說stayed at home。"},
+{t:"T6-D2 出門版",q:[["Did you go anywhere fun?","有去哪好玩的嗎？"],["Go anywhere nice?","有去哪不錯的地方嗎？"],["Do anything fun outside?","有出門走走嗎？"]],a:[["Yeah, downtown was fun.","對啊，市中心很好玩。"],["Yeah, I went to a concert. Awesome!","對啊，去聽演唱會。超讚！"],["Not really. Just stayed in.","沒啥，就待在家。"]],c:"🔁 T4 + T6混用。"},
+{t:"T7-D1 天氣開場",q:[["Cold today, huh?","今天很冷齁？"],["It's really cold out there, huh?","外面真的很冷齁？"],["Winter is here, huh?","冬天來了齁？"]],a:[["I know, right? Freezing!","對啊！凍死！"],["Exactly.","就是說啊。"],["Totally. Stay warm!","完全同意。保暖！"]],c:"★ huh?=對吧？Exactly=贊同。"},
+{t:"T7-D2 大雪版",q:[["A lot of snow, huh?","雪很大齁？"],["So much snow, huh?","雪超大齁？"],["Crazy snow today, huh?","今天雪很誇張齁？"]],a:[["Yeah, it's really bad out there.","對啊，外面真的很糟。"],["I know, right? So much snow!","對啊！雪超大！"],["Totally. Stay warm out there!","完全同意。注意保暖！"]],c:"🔁 T1+T7：問候→聊雪。"},
+{t:"T8-D1 忙爆",q:[["Have you been busy?","最近很忙嗎？"],["Busy these days?","這幾天忙嗎？"],["A lot going on?","事情很多嗎？"]],a:[["So much homework.","作業超多。"],["Mostly school stuff.","都是學校的事。"],["No time to rest.","都沒時間休息。"]],c:"★ 很忙說法：so much / a lot going on。"},
+{t:"T8-D2 約吃午餐",q:[["Do you want to get lunch tomorrow?","明天一起吃午餐？"],["Lunch tomorrow?","明天午餐？"],["Free for lunch tomorrow?","明天午餐有空嗎？"]],a:[["Sounds good! I need a break.","不錯！需休息。"],["Sure! Text me after class.","好啊！下課傳訊。"],["Sorry, I'm busy. Rain check?","抱歉沒空，改天好嗎？"]],c:"🔁 T2 + T8：近況→約吃飯。"},
+{t:"T9-D1 約週末",q:[["Any plans this weekend?","週末有計畫嗎？"],["Anything planned?","有什麼計畫嗎？"],["What are you doing this weekend?","週末幹嘛？"]],a:[["Thinking of checking out that café.","想去那家咖啡店看看。"],["Probably just relax.","大概休息一下。"],["Probably just hang out with Maya.","大概跟Maya晃晃。"]],c:"★ thinking of 比will自然。"},
+{t:"T9-D2 確認週六",q:[["Still on for Saturday?","週六還去嗎？"],["Are we still on for Saturday?","週六還照約嗎？"],["Saturday still good?","週六OK嗎？"]],a:[["Yeah! Can't wait!","對啊！等不及！"],["Of course! Like 2?","當然！大概2點？"],["Yeah! Text you Saturday morning?","對啊！週六早上再傳訊？"]],c:"🔁 T9-D1 + T9-D2：約→確認。"},
+{t:"T10-D1 巧遇",q:[["Long time no see!","好久不見！"],["It's been forever!","超久了！"],["Good to see you!","看到你真好！"]],a:[["I know! How's it going?","對啊！最近怎樣？"],["We should catch up soon!","該找時間敘舊！"],["For sure! Coffee Saturday?","一定！週六咖啡？"]],c:"🔁 畢業串：T1+T2+T8+T10。"},
+{t:"T10-D2 約下週咖啡",q:[["Coffee next week?","下週喝咖啡好嗎？"],["Let's do coffee next week?","下週一起喝咖啡好嗎？"],["Same time next week?","下週同時間好嗎？"]],a:[["Deal!","成交！"],["Deal! I'll text you tonight.","成交！今晚傳訊。"],["Definitely! Take care!","一定！保重！"]],c:"★ Deal = 成交！敲定約會用。"},
+{cover:0,k:"REVIEW",h:"怎麼用這份簡報",sub:"每頁一堂・左Q右A・老師念Q學生挑A回<br>Day2先複習Day1・後面主題回頭抽舊主題<br>列印→另存PDF→一頁一張投影片"}
+];
+var stage=document.getElementById('stage'),idx=0;
+function render(){
+stage.innerHTML='';
+SLIDES.forEach(function(s,i){
+var d=document.createElement('div');d.className='slide'+(i===idx?' on':'');
+if(s.cover===1){d.classList.add('cover');d.innerHTML='<div class="kicker">'+s.k+'</div><h1>'+s.h+'</h1><div style="font-size:19px;color:#475569">'+s.sub+'</div>'}
+else if(s.cover===0){d.innerHTML='<div class="kicker">'+s.k+'</div><h2>'+s.h+'</h2><div style="font-size:19px;color:#475569">'+s.sub+'</div>'}
+else{
+var h='<div class="kicker">'+s.t+'</div>';
+var c='<div class="cols"><div class="col q"><b>❓ 問法（任選一句）</b>';
+s.q.forEach(function(q,j){c+='<div><span class="en">Q'+(j+1)+' '+q[0]+'</span><br><span class="zh">'+q[1]+'</span></div>'});
+c+='</div><div class="col a"><b>✅ 答法（任選一句）</b>';
+s.a.forEach(function(q,j){c+='<div><span class="en">A'+(j+1)+' '+q[0]+'</span><br><span class="zh">'+q[1]+'</span></div>'});
+c+='</div></div><div class="combo">'+s.c+'</div>';
+d.innerHTML=h+c;
+}
+stage.appendChild(d);
+});
+document.getElementById('counter').textContent=(idx+1)+' / '+SLIDES.length;
+}
+function move(n){idx=(idx+n+SLIDES.length)%SLIDES.length;render()}
+document.addEventListener('keydown',function(e){if(e.key==='ArrowRight')move(1);if(e.key==='ArrowLeft')move(-1)});
+render();
+/* 全站計數 (與 index.html 共用同一組 Cloudflare KV,每日同人去重) */
+(function(){function tw(){try{var p=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Taipei',year:'numeric',month:'2-digit',day:'2-digit'});return p.format(new Date())}catch(e){var n=new Date(Date.now()+8*3600*1000);return n.toISOString().slice(0,10)}}var K='us_talk_visit_date',D=tw(),last='';try{last=localStorage.getItem(K)||''}catch(e){}var inc=last!==D?'1':'0';function renderC(t,c){document.querySelectorAll('[data-visit-count="total"]').forEach(function(b){b.textContent=(t==null?'—':t)});document.querySelectorAll('[data-visit-count="today"]').forEach(function(b){b.textContent=(c==null?'—':c)})}fetch('/api/visits?inc='+inc).then(function(r){return r.json()}).then(function(j){if(j&&typeof j.total==='number'){renderC(j.total,j.today);if(inc==='1'){try{localStorage.setItem(K,D)}catch(e){}}}}).catch(function(){})}();
+</script>
+</body>
+</html>

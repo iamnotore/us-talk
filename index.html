@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>美加日常會話10主題×2天｜每天3問+3答可互換</title>
+<style>
+:root{--wrap:1100px;--wrap-mobile:480px;--bg:#f7f5ef;--card:#fff;--text:#2d2a24;--muted:#6f6a5e;--accent:#6d5ef0;--accent2:#0e9bb5;--green:#0e9f6e;--red:#dc2626;--border:#e6dfd0;--radius:16px;--shadow:0 6px 24px rgba(80,70,40,.08)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;line-height:1.7}
+.top-warn{background:var(--red);color:#fff;text-align:center;font-size:13px;padding:6px 10px}
+header.hero{max-width:var(--wrap);margin:20px auto;padding:28px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow)}
+.badge{display:inline-block;background:#ede9fe;color:var(--accent);font-weight:700;font-size:13px;padding:4px 12px;border-radius:999px}
+h1.grad{background:linear-gradient(90deg,#6d5ef0,#0e9bb5);-webkit-background-clip:text;background-clip:text;color:transparent;margin:.4em 0;font-size:26px;line-height:1.35}
+.sub{color:var(--muted)}.meta-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.meta-row span{background:#f4f1e8;border:1px solid var(--border);border-radius:999px;padding:4px 12px;font-size:13px}
+.view-switch{display:flex;gap:8px;margin-top:14px}.view-switch button{border:1px solid var(--border);background:#fff;border-radius:10px;padding:8px 14px;cursor:pointer}.view-switch button.on{background:var(--text);color:#fff}
+.progress .bar.ctrl{padding-top:6px;gap:8px;flex-wrap:wrap}.ctrl-group{display:inline-flex;gap:4px;align-items:center;background:#fff;border:1px solid var(--border);border-radius:999px;padding:2px 8px}.ctrl-group button{border:none;background:transparent;border-radius:6px;padding:4px 8px;cursor:pointer;font-size:13px}.ctrl-group button.on{background:var(--text);color:#fff}.ctrl-hint{font-size:12px;color:var(--muted)}
+.progress{position:sticky;top:0;z-index:20;background:rgba(247,245,239,.95);border-bottom:1px solid var(--border);padding:10px}.progress .bar{max-width:var(--wrap);margin:0 auto;display:flex;align-items:center;gap:12px}.track{flex:1;background:#e8e2d2;border-radius:999px;height:10px;overflow:hidden}.fill{height:100%;width:0;background:linear-gradient(90deg,var(--accent),var(--accent2))}
+main{max-width:var(--wrap);margin:0 auto;padding:16px}
+nav.toc{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:14px 18px;margin:14px 0}
+nav.toc a{color:var(--accent);text-decoration:none;margin-right:10px;font-size:14px}
+section.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;margin:18px 0}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}.box{border:1px solid var(--border);border-radius:12px;padding:12px 14px}.box.q{background:#eef2ff}.box.a{background:#ecfdf5}.box.good{background:#ecfdf5}
+.en{font-size:17px;font-weight:700}.zh{color:var(--muted);font-size:14px}
+.say{border:1px solid var(--border);background:#fff;border-radius:8px;padding:6px 10px;cursor:pointer;margin:4px 6px 4px 0}.say:hover{border-color:var(--accent)}
+.tag{display:inline-block;font-size:12px;background:#eef2ff;color:#3730a3;border-radius:6px;padding:1px 8px;margin-right:6px}.tag.g{background:#d1fae5;color:#065f46}
+.copy{border:1px dashed var(--accent);background:#fff;color:var(--accent);border-radius:8px;padding:4px 10px;cursor:pointer;font-size:13px}
+.line{padding:8px 0;border-bottom:1px dashed var(--border)}.line:last-child{border-bottom:none}
+.combo{background:#fffbeb;border:1px solid #fcd34d;border-radius:10px;padding:10px 12px;margin-top:10px;font-size:14px}
+.mix{background:#f5f3ff;border:1px solid #c4b5fd;border-radius:10px;padding:10px 12px;margin-top:10px;font-size:15px;font-weight:700}
+.flow{font-size:14px;background:#f8fafc;border:1px solid var(--border);border-radius:10px;padding:10px 12px;margin-top:10px}
+.roadmap{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:10px}.roadmap a{background:#fff;border:1px solid var(--border);border-radius:10px;padding:8px;text-align:center;font-size:13px;color:var(--text);text-decoration:none}
+.review-box{background:#0f172a;color:#fff;border-radius:14px;padding:18px;margin-top:12px}#reviewQ{font-size:20px;font-weight:800}#reviewA{color:#c7d2fe;margin-top:6px}
+.float-print{position:fixed;right:14px;bottom:14px;display:flex;flex-direction:column;gap:8px}.float-print button{border:none;border-radius:999px;padding:12px 16px;cursor:pointer;box-shadow:var(--shadow);background:var(--text);color:#fff}
+footer{max-width:var(--wrap);margin:20px auto;padding:14px;color:var(--muted);font-size:13px;text-align:center}
+body.view-mobile header.hero,body.view-mobile .progress .bar,body.view-mobile main,body.view-mobile footer{max-width:var(--wrap-mobile)}body.view-mobile main{border:2px solid var(--text);border-radius:28px}body.view-mobile .grid2{grid-template-columns:1fr}body.view-mobile .roadmap{grid-template-columns:repeat(2,1fr)}
+@media print{.view-switch,.float-print,.progress,.bar.ctrl{display:none}section.card{break-inside:avoid}}
+@media(max-width:700px){.grid2{grid-template-columns:1fr}.roadmap{grid-template-columns:repeat(2,1fr)}h1.grad{font-size:22px}}
+</style>
+</head>
+<body>
+<div class="top-warn">高中職適用｜10主題×2天=20天｜每天3種問法+3種答法・可任意互換｜美加道地版｜<a href="slides.html" style="color:#fff">簡報版</a>・<a href="slides.pdf" style="color:#fff">PDF</a></div>
+<header class="hero">
+<div class="badge">Authentic US / Canada・3Qs + 3As per day</div>
+<h1 class="grad">每天練：同一意思3種問法＋3種答法，任意配都對</h1>
+<div class="sub">不是背一段6句連續對話，而是 <b>Q1/Q2/Q3 同義換著問 × A1/A2/A3( Day1有5句) 同義換著答</b>。例如問候：How's it going? / How are things? / How are you doing? 任一句 + Pretty good. / I'm doing well. / I'm doing okay. / Can't complain. / Not too bad, just busy. 任一句，任意配都對，才敢開口。</div>
+<div class="meta-row"><span>⏱ 每天3–5分鐘</span><span>💬 每天3問+3答</span><span>🔀 9種混搭</span><span>🔊 真人發音(Q男聲/A女聲)</span><span>🔁 Day2含Day1・後主題含前主題</span></div>
+<div class="view-switch"><button id="vDesk" class="on">🖥 電腦版</button><button id="vMob">📱 行動版</button></div>
+</header>
+<div class="progress"><div class="bar"><b id="pText">進度 0/20</b><div class="track"><div class="fill" id="pFill"></div></div><button class="copy" id="resetBtn">重置</button></div><div class="bar ctrl"><span class="ctrl-group"><button id="vDesk2">電腦版</button><button id="vMob2">手機版</button></span><span class="ctrl-group"><button id="fontDown">A-</button><b id="fontPct">100%</b><button id="fontUp">A+</button></span><span class="ctrl-group"><button data-speed="0.7">0.7x</button><button data-speed="1" class="on">1x</button><button data-speed="1.25">1.25x</button></span><span class="ctrl-hint">👁版面・🔠字體・🎙語速</span></div></div>
+<main>
+<nav class="toc"><b>導覽：</b><a href="#map">地圖</a><span id="tocDays"></span><a href="#review">複習</a><a href="#bank">補充庫</a></nav>
+<section class="card" id="map"><h2>10主題×2天 地圖</h2><div class="roadmap" id="mapGrid"></div></section>
+<div id="days"></div>
+<section class="card" id="review">
+<h2>🔁 累積複習（投影抽問）</h2>
+<p class="zh">勾選各天「學完」後，只抽已學範圍。第一種是同天內9種混搭，第二種是跨天連問。</p>
+<div style="display:flex;gap:8px;flex-wrap:wrap"><button class="say" id="drawBtn" style="background:var(--text);color:#fff">🎲 同天混搭抽一組</button>
+<button class="say" id="comboBtn">🔀 跨天連問（整合）</button>
+<button class="say" id="sayAgain">🔊 再播一次</button></div>
+<div class="review-box"><div id="reviewQ">按「抽一組」開始</div><div id="reviewA"></div></div>
+</section>
+<section class="card" id="bank">
+<h2>補充表達庫</h2>
+<div class="grid2">
+<div class="box"><b>贊同接話</b><br><b>I know, right?</b> <button class="say" data-au="audio/bank1.mp3" data-say="I know, right?">🔊真人</button> 對啊<br><b>Exactly.</b> <button class="say" data-au="audio/bank2.mp3" data-say="Exactly.">🔊真人</button> 就是說啊<br><b>For sure. / Definitely.</b> <button class="say" data-au="audio/bank3.mp3" data-say="For sure. Definitely.">🔊真人</button><br><b>Sounds good.</b> <button class="say" data-au="audio/bank4.mp3" data-say="Sounds good.">🔊真人</button></div>
+<div class="box"><b>緩衝小語</b><br><b>Well…</b> <button class="say" data-au="audio/bank5.mp3" data-say="Well...">🔊真人</button><br><b>Honestly…</b> <button class="say" data-au="audio/bank6.mp3" data-say="Honestly">🔊真人</button><br><b>Probably just…</b> <button class="say" data-au="audio/bank7.mp3" data-say="Probably just relax.">🔊真人</button><br><b>No worries.</b> <button class="say" data-au="audio/bank8.mp3" data-say="No worries.">🔊真人</button></div>
+</div>
+<h2 style="margin-top:18px">🏫 課室英語加油站</h2>
+<div class="grid2">
+<div class="box q"><b>🙋 課室發問（上課敢開口）</b><div class="line"><span class="en">Could you say that again, please?</span> <button class="say" data-say="Could you say that again, please?">🔊跟讀</button><br><span class="zh">請再說一次好嗎？</span></div><div class="line"><span class="en">How do you spell it?</span> <button class="say" data-say="How do you spell it?">🔊跟讀</button><br><span class="zh">這個字怎麼拼？</span></div><div class="line"><span class="en">What's this in English?</span> <button class="say" data-say="What is this in English?">🔊跟讀</button><br><span class="zh">這個用英文怎麼說？</span></div><div class="line"><span class="en">May I go to the restroom?</span> <button class="say" data-say="May I go to the restroom?">🔊跟讀</button><br><span class="zh">我可以去洗手間嗎？</span></div></div>
+<div class="box a"><b>✅ 聽懂／求救（接得上話）</b><div class="line"><span class="en">Sorry, I don't understand.</span> <button class="say" data-say="Sorry, I do not understand.">🔊跟讀</button><br><span class="zh">對不起，我聽不懂。</span></div><div class="line"><span class="en">Can you speak more slowly?</span> <button class="say" data-say="Can you speak more slowly?">🔊跟讀</button><br><span class="zh">可以說慢一點嗎？</span></div><div class="line"><span class="en">Am I pronouncing this right?</span> <button class="say" data-say="Am I pronouncing this right?">🔊跟讀</button><br><span class="zh">我這樣唸對嗎？</span></div><div class="line"><span class="en">Got it. Thank you!</span> <button class="say" data-say="Got it. Thank you!">🔊跟讀</button><br><span class="zh">懂了，謝謝！</span></div></div>
+</div>
+<p class="zh">🆕 課室英語先用裝置發音跟讀。上面20天新版句子若真人音檔還沒錄好，也會自動用裝置發音代替，不影響練習。</p>
+</section>
+</main>
+<div class="float-print"><button onclick="window.print()">🖨 列印</button></div>
+<footer>美加日常會話 10主題×2天・3問+3答可互換｜建議一週2天，10週跑完<div id="visitStats" style="margin-top:6px">👁 總訪客 <b data-visit-count="total">…</b> ｜ 今日 <b data-visit-count="today">…</b></div></footer>
+<script>
+var DATA=[
+{theme:"T1 打招呼 Greetings",days:[
+{title:"T1-D1 基本問候",qs:[["How's it going?","最近怎樣？（最常用）"],["How are things?","最近如何？（自然版，很常用）"],["How are you doing?","你最近好嗎？（自然有禮）"]],as:[["Pretty good. You?","不錯耶。你呢？"],["I'm doing well.","我很好。（正式、安全牌，考試也可用）"],["I'm doing okay.","我還不錯。（比well輕鬆一點）"],["Can't complain.","沒什麼好抱怨的（＝不錯啦）。"],["Not too bad, just busy.","還不錯，就是有點忙。"]]},
+{title:"T1-D2 深入一點的問候",qs:[["How've you been?","你最近好嗎？（好久不見用）"],["How's your day going?","你今天過得如何？"],["How's everything?","一切都好嗎？"]],as:[["Good. Busy, though.","不錯，就是忙。"],["Nothing new, really.","沒什麼新鮮事。"],["Doing well, thanks.","很好，謝謝。"]]}]},
+{theme:"T2 近況 Small Talk",days:[
+{title:"T2-D1 最近在幹嘛",qs:[["What're you up to?","最近在忙啥？"],["What've you been up to?","這陣子在忙啥？（完成式，更道地）"],["What're you up to lately?","最近都在幹嘛？"]],as:[["Not much. Just relaxing.","沒幹嘛。就休息一下。"],["Nothing much. Just studying.","沒什麼。就讀書。"],["Just hanging out.","就晃晃、聚聚。"]]},
+{title:"T2-D2 週末版近況",qs:[["What are you up to this weekend?","這週末幹嘛？"],["Anything fun lately?","最近有什麼好玩的嗎？"],["Been up to anything fun?","有幹嘛好玩的嗎？"]],as:[["Probably just relax at home.","大概就在家休息。"],["Just grabbing coffee with Maya.","就跟Maya拿咖啡。"],["Not really. Just staying in.","沒啥。就待在家。"]]}]},
+{theme:"T3 點餐 Ordering",days:[
+{title:"T3-D1 店員問 / 你點",qs:[["What can I get for you?","想點什麼？（店員最常用）"],["What can I get started for you?","想先點什麼？（餐廳版）"],["What would you like today?","今天想來點什麼？"]],as:[["Can I get a medium latte to go?","我要中杯拿鐵外帶。"],["Could I get a latte and a muffin to go?","可以要拿鐵+瑪芬外帶嗎？（更有禮）"],["That's it. Thanks!","就這樣。謝謝！（結束點餐）"]]},
+{title:"T3-D2 不用加點",qs:[["Anything else?","還需要別的嗎？"],["Anything else for you?","還需要別的嗎？（有禮版）"],["Would you like anything else?","還想加點什麼嗎？"]],as:[["No, that's it. How much is that?","不用了，就這樣。多少錢？"],["No worries. Just the latte, then.","沒事啦。那就只有拿鐵。"],["No, that's all. Thank you!","不用了，就這樣，謝謝！"]]}]},
+{theme:"T4 食物評價 Food",days:[
+{title:"T4-D1 好吃怎麼說",qs:[["How was it?","覺得怎樣？"],["How'd you like it?","你喜歡嗎？（店員常問）"],["How was everything?","一切都好嗎？（餐廳結帳問）"]],as:[["It was so good.","超好吃。"],["It was exactly what I needed.","正是我想吃的。"],["I'm so full.","我吃得好飽。"]]},
+{title:"T4-D2 再訪 / 推薦",qs:[["Would you come back?","還會再來嗎？"],["Is this place good?","這家好嗎？"],["Would you recommend it?","你會推薦這家嗎？"]],as:[["Definitely. This place is always good.","一定會。這家一直都很好。"],["Worth every penny.","每一分錢都值得。"],["We should come back soon!","我們該快點再來！"]]}]},
+{theme:"T5 購物 Shopping",days:[
+{title:"T5-D1 多少錢 / 特價",qs:[["How much was it?","多少錢？（過去式最自然）"],["How much did it cost?","花了多少？"],["Was it expensive?","貴嗎？"]],as:[["About twenty dollars.","大概20塊錢。"],["I got it on sale. 50% off!","特價買的。打五折！"],["Not bad. That's a great deal!","不貴。很划算！"]]},
+{title:"T5-D2 約逛街",qs:[["Do you want to go to the mall?","要不要去逛百貨？"],["Do you want to come with me?","要跟我去嗎？"],["How about the mall on Saturday?","週六去百貨如何？"]],as:[["Sounds good! I'm in.","聽起來不錯！我去。"],["For sure! When?","當然！何時？"],["Okay! Text me later.","好！等會傳訊給我。"]]}]},
+{theme:"T6 週末 Weekend",days:[
+{title:"T6-D1 週一問週末",qs:[["How was your weekend?","週末如何？"],["How'd your weekend go?","週末過得如何？"],["Do anything fun this weekend?","週末有幹嘛好玩的嗎？"]],as:[["It was nice and relaxing.","輕鬆愉快。"],["I just stayed in.","就待在家（不出門）。"],["I hung out with Alex.","跟Alex出去晃、聚。"]]},
+{title:"T6-D2 出門版",qs:[["Did you go anywhere fun?","有去哪好玩的嗎？"],["Go anywhere nice?","有去哪不錯的地方嗎？"],["Do anything fun outside?","有出門走走嗎？"]],as:[["Yeah, downtown was fun.","對啊，市中心很好玩。"],["Yeah, I went to a concert. It was awesome!","對啊，我去聽演唱會。超讚！"],["Not really. Just stayed in.","沒啥，就待在家。"]]}]},
+{theme:"T7 天氣 Weather",days:[
+{title:"T7-D1 天氣開場白",qs:[["Cold today, huh?","今天很冷齁？"],["It's really cold out there, huh?","外面真的很冷齁？"],["Winter is here, huh?","冬天來了齁？"]],as:[["I know, right? Freezing!","對啊！凍死了！"],["Exactly. I really don't like this wind.","就是說啊。我真的不喜歡這風。"],["Totally. Stay warm!","完全同意。注意保暖！"]]},
+{title:"T7-D2 大雪版",qs:[["A lot of snow, huh?","雪很大齁？"],["So much snow, huh?","雪超大齁？"],["Crazy snow today, huh?","今天雪很誇張齁？"]],as:[["Yeah, it's really bad out there.","對啊，外面真的很糟。"],["I know, right? So much snow!","對啊！雪超大！"],["Totally. Stay warm out there!","完全同意。在外面注意保暖！"]]}]},
+{theme:"T8 很忙 Busy",days:[
+{title:"T8-D1 忙爆怎麼說",qs:[["Have you been busy?","你最近很忙嗎？"],["Busy these days?","這幾天忙嗎？"],["A lot going on?","事情很多嗎？"]],as:[["Yeah, so much homework.","對啊，作業超多。"],["Kind of. Mostly school stuff.","有點。都是學校的事。"],["So busy. No time to rest.","超忙。都沒時間休息。"]]},
+{title:"T8-D2 約吃午餐",qs:[["Do you want to get lunch tomorrow?","明天要不要一起吃午餐？"],["Lunch tomorrow?","明天午餐？"],["Free for lunch tomorrow?","明天午餐有空嗎？"]],as:[["Sounds good! I need a break.","聽起來不錯！我需要休息一下。"],["Sure! Text me after class.","好啊！下課傳訊給我。"],["Sorry, I'm busy. Rain check?","抱歉，明天沒空。改天好嗎？"]]}]},
+{theme:"T9 約計畫 Plans",days:[
+{title:"T9-D1 約週末",qs:[["Any plans this weekend?","這週末有計畫嗎？"],["Anything planned?","有什麼計畫嗎？"],["What are you doing this weekend?","這週末幹嘛？"]],as:[["I'm thinking of checking out that new café.","在想去那家新咖啡店看看。(check out=逛逛)"],["Not really. Probably just relax.","沒啥。大概休息一下。"],["Probably just hang out with Maya.","大概就跟Maya晃晃。"]]},
+{title:"T9-D2 確認週六",qs:[["Still on for Saturday?","週六還去嗎？"],["Are we still on for Saturday?","週六還照約嗎？"],["Saturday still good?","週六OK嗎？"]],as:[["Yeah! Can't wait!","對啊！等不及了！"],["Of course! Like 2?","當然！大概2點？"],["Yeah! Text you Saturday morning?","對啊！週六早上再傳訊？"]]}]},
+{theme:"T10 敘舊 Catch Up",days:[
+{title:"T10-D1 巧遇",qs:[["Long time no see!","好久不見！"],["It's been forever!","超久了！"],["Good to see you!","看到你真好！"]],as:[["I know! How's it going?","對啊！最近怎樣？(回T1)"],["We should catch up soon!","我們該找時間敘舊！"],["For sure! Coffee Saturday?","一定！週六咖啡？"]]},
+{title:"T10-D2 約下週咖啡",qs:[["Coffee next week?","下週喝咖啡好嗎？"],["Let's do coffee next week?","下週一起喝咖啡好嗎？"],["Same time next week?","下週同時間好嗎？"]],as:[["Deal!","成交！"],["Deal! I'll text you tonight.","成交！我今晚傳訊。"],["Definitely! Take care!","一定！保重！"]]}]}
+];
+var VOICE_SPEED=1;try{VOICE_SPEED=parseFloat(localStorage.voice_speed)||1}catch(e){VOICE_SPEED=1}
+var player=new Audio();player.preload='auto';try{player.preservesPitch=true}catch(e){}var playQueue=[],playFallback=[];
+player.addEventListener('loadedmetadata',function(){try{player.playbackRate=VOICE_SPEED}catch(e){}});
+player.onended=function(){playQueue.shift();playFallback.shift();nextInQueue()};
+player.onerror=function(){var fb=playFallback.slice();playQueue=[];playFallback=[];if(fb.length)robotSay(fb.join('. '))};
+function nextInQueue(){if(!playQueue.length)return;try{player.src=playQueue[0];player.defaultPlaybackRate=VOICE_SPEED;player.playbackRate=VOICE_SPEED;var p=player.play();if(p&&p.catch)p.catch(function(){var fb=playFallback.slice();playQueue=[];playFallback=[];if(fb.length)robotSay(fb.join('. '))})}catch(e){var fb2=playFallback.slice();playQueue=[];playFallback=[];if(fb2.length)robotSay(fb2.join('. '))}}
+function playFiles(files,texts){try{speechSynthesis.cancel()}catch(e){};player.pause();playQueue=files.slice();playFallback=texts.slice();window._lastFiles=files.slice();window._lastTexts=texts.slice();nextInQueue()}
+function robotSay(t){try{speechSynthesis.cancel();var u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=VOICE_SPEED;var vs=speechSynthesis.getVoices().filter(function(v){return v.lang.indexOf('en')===0});var f=vs.filter(function(v){return v.name.indexOf('Natural')>-1&&v.lang==='en-US'})[0]||vs.filter(function(v){return v.name.indexOf('Google US')>-1})[0]||vs.filter(function(v){return v.lang==='en-US'})[0]||vs[0];if(f)u.voice=f;speechSynthesis.speak(u)}catch(e){}window._lastSay=t}
+function speak(t){robotSay(t)}
+function au(dayId,kind,n){return 'audio/'+dayId.toLowerCase()+'-'+kind+n+'.mp3'}
+function sayBtn(el){var f=el.getAttribute('data-au'),t=el.getAttribute('data-say');if(f){playFiles([f],[t||''])}else if(t){robotSay(t)}}
+function setView(m){document.body.classList.toggle('view-mobile',m==='mobile');try{localStorage.view_mode=m}catch(e){};['vDesk','vMob','vDesk2','vMob2'].forEach(function(id){var b=document.getElementById(id);if(!b)return;var isDesk=(id==='vDesk'||id==='vDesk2');b.classList.toggle('on',(m!=='mobile')===isDesk)})}
+document.getElementById('vDesk').onclick=function(){setView('desktop')};document.getElementById('vMob').onclick=function(){setView('mobile')};document.getElementById('vDesk2').onclick=function(){setView('desktop')};document.getElementById('vMob2').onclick=function(){setView('mobile')};
+try{var sv=localStorage.view_mode;if(sv==='mobile'||sv==='desktop')setView(sv);else if(innerWidth<600)setView('mobile')}catch(e){if(innerWidth<600)setView('mobile')}
+var FONT_SCALE=1;try{FONT_SCALE=parseFloat(localStorage.font_scale)||1}catch(e){FONT_SCALE=1}
+function applyFont(){document.body.style.zoom=FONT_SCALE;var p=document.getElementById('fontPct');if(p)p.textContent=Math.round(FONT_SCALE*100)+'%';try{localStorage.font_scale=FONT_SCALE}catch(e){}}
+document.getElementById('fontUp').onclick=function(){FONT_SCALE=Math.min(1.5,Math.round((FONT_SCALE+0.1)*100)/100);applyFont()};
+document.getElementById('fontDown').onclick=function(){FONT_SCALE=Math.max(0.85,Math.round((FONT_SCALE-0.1)*100)/100);applyFont()};
+applyFont();
+function applySpeed(){document.querySelectorAll('[data-speed]').forEach(function(b){b.classList.toggle('on',parseFloat(b.getAttribute('data-speed'))===VOICE_SPEED)});try{player.playbackRate=VOICE_SPEED;player.defaultPlaybackRate=VOICE_SPEED}catch(e){}try{localStorage.voice_speed=VOICE_SPEED}catch(e){}}
+document.querySelectorAll('[data-speed]').forEach(function(b){b.onclick=function(){VOICE_SPEED=parseFloat(b.getAttribute('data-speed'));applySpeed()}});
+applySpeed();
+document.querySelectorAll('.say[data-say]').forEach(function(b){b.onclick=function(){sayBtn(this)}});
+var daysEl=document.getElementById('days'),mapGrid=document.getElementById('mapGrid'),toc=document.getElementById('tocDays');
+var all=[];
+DATA.forEach(function(th,ti){
+var sec=document.createElement('section');sec.className='card';
+sec.innerHTML='<h2>'+(ti+1)+'｜'+th.theme+'</h2>';
+var wrap=document.createElement('div');sec.appendChild(wrap);daysEl.appendChild(sec);
+var a=document.createElement('a');a.href='#T'+(ti+1)+'D1';a.innerHTML='T'+(ti+1)+'<br>'+th.theme.split(' ')[1];mapGrid.appendChild(a);
+var t=document.createElement('a');t.href='#T'+(ti+1)+'D1';t.textContent='T'+(ti+1);toc.appendChild(t);
+th.days.forEach(function(d,di){
+var id='T'+(ti+1)+'D'+(di+1);all.push({id:id,title:d.title,qs:d.qs,as:d.as,combo:d.combo});
+var card=document.createElement('section');card.className='card';card.id=id;
+var h='<div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center"><h2 style="margin:0">'+id+'｜'+d.title+'</h2><label style="font-size:14px"><input type="checkbox" data-done="'+id+'"> 學完打勾</label></div>';
+var g='<div class="grid2" style="margin-top:10px"><div class="box q"><b>❓ 問法（同義，任選一句問）</b>';
+d.qs.forEach(function(q,i){g+='<div class="line"><span class="tag">Q'+(i+1)+'</span><span class="en">'+q[0]+'</span> <button class="say" data-au="audio/'+id.toLowerCase()+'-q'+(i+1)+'.mp3" data-say="'+q[0].replace(/"/g,'')+'">🔊真人</button><br><span class="zh">'+q[1]+'</span></div>'});
+g+='</div><div class="box a"><b>✅ 答法（同義，任選一句答）</b>';
+d.as.forEach(function(q,i){g+='<div class="line"><span class="tag g">A'+(i+1)+'</span><span class="en">'+q[0]+'</span> <button class="say" data-au="audio/'+id.toLowerCase()+'-a'+(i+1)+'.mp3" data-say="'+q[0].replace(/"/g,'')+'">🔊真人</button><br><span class="zh">'+q[1]+'</span></div>'});
+g+='</div></div>';
+var fullQ=d.qs.map(function(x){return x[0]}).join(' / '),fullA=d.as.map(function(x){return x[0]}).join(' / ');
+g+='<div class="mix" id="mix-'+id+'">🔀 混搭：按下面按鈕，隨機 Q×A 組合。Q任一 + A任一都對。</div>';
+g+='<div style="margin-top:8px"><button class="say" data-mix="'+id+'">🎲 隨機混搭這天</button> <button class="say" data-sayall="'+id+'">🔊 全播</button> <button class="copy" data-copy="'+(fullQ+' --- '+fullA).replace(/"/g,'')+'">複製全部</button></div>';
+card.innerHTML=h+g;wrap.appendChild(card);
+});
+});
+document.querySelectorAll('.say[data-say]').forEach(function(b){b.onclick=function(){sayBtn(this)}});
+document.querySelectorAll('[data-copy]').forEach(function(b){b.onclick=function(){try{navigator.clipboard.writeText(this.getAttribute('data-copy'))}catch(e){}var o=this.textContent;this.textContent='已複製✓';var s=this;setTimeout(function(){s.textContent=o},1500)}});
+function findDay(id){for(var i=0;i<all.length;i++)if(all[i].id===id)return all[i];return null}
+document.querySelectorAll('[data-mix]').forEach(function(b){b.onclick=function(){var d=findDay(this.getAttribute('data-mix'));var qi=Math.floor(Math.random()*d.qs.length),ai=Math.floor(Math.random()*d.as.length);var q=d.qs[qi][0],a=d.as[ai][0];document.getElementById('mix-'+d.id).textContent='🔀 '+q+' → '+a;playFiles([au(d.id,'q',qi+1),au(d.id,'a',ai+1)],[q,a])}});
+document.querySelectorAll('[data-sayall]').forEach(function(b){b.onclick=function(){var d=findDay(this.getAttribute('data-sayall'));var fs=[],ts=[];d.qs.forEach(function(x,i){fs.push(au(d.id,'q',i+1));ts.push(x[0])});d.as.forEach(function(x,i){fs.push(au(d.id,'a',i+1));ts.push(x[0])});playFiles(fs,ts)}});
+function updateP(){var n=document.querySelectorAll('[data-done]:checked').length;document.getElementById('pText').textContent='進度 '+n+'/20';document.getElementById('pFill').style.width=(n*5)+'%';document.querySelectorAll('[data-done]').forEach(function(c){try{localStorage.setItem('done_'+c.getAttribute('data-done'),c.checked?'1':'0')}catch(e){}})}
+document.querySelectorAll('[data-done]').forEach(function(c){try{if(localStorage.getItem('done_'+c.getAttribute('data-done'))==='1')c.checked=true}catch(e){}c.onchange=updateP});updateP();
+document.getElementById('resetBtn').onclick=function(){document.querySelectorAll('[data-done]').forEach(function(c){c.checked=false});updateP()};
+function learned(){var r=[];document.querySelectorAll('[data-done]').forEach(function(c){if(c.checked)r.push(c.getAttribute('data-done'))});if(r.length)return r;return all.slice(0,2).map(function(d){return d.id})}
+function pick(a){return a[Math.floor(Math.random()*a.length)]}
+function getD(id){return findDay(id)}
+function pickIdx(n){return Math.floor(Math.random()*n)}
+document.getElementById('drawBtn').onclick=function(){var L=learned();var pool=all.filter(function(d){return L.indexOf(d.id)>-1});var p=pick(pool);var qi=pickIdx(p.qs.length),ai=pickIdx(p.as.length);var q=p.qs[qi][0],a=p.as[ai][0];document.getElementById('reviewQ').textContent='【'+p.id+'】'+p.title+': '+q;document.getElementById('reviewA').textContent='→ '+a+'（同天任一答都對）';playFiles([au(p.id,'q',qi+1),au(p.id,'a',ai+1)],[q,a])};
+document.getElementById('comboBtn').onclick=function(){var L=learned();var pool=all.filter(function(d){return L.indexOf(d.id)>-1});if(pool.length<2){alert('先勾選至少2天');return}var x=pick(pool),y=pick(pool);while(y===x)y=pick(pool);var qi=pickIdx(x.qs.length),ai=pickIdx(y.as.length);var qx=x.qs[qi][0],ay=y.as[ai][0];document.getElementById('reviewQ').textContent='【跨天】'+x.id+'問：'+qx;document.getElementById('reviewA').textContent='→ 用'+y.id+'答：'+ay+'（舊+新混用）';playFiles([au(x.id,'q',qi+1),au(y.id,'a',ai+1)],[qx,ay])};
+document.getElementById('sayAgain').onclick=function(){if(window._lastFiles&&window._lastFiles.length)playFiles(window._lastFiles,window._lastTexts);else if(window._lastSay)robotSay(window._lastSay)};
+/* 全站計數 (Cloudflare Pages Function + KV,每日同人去重) */
+(function(){function tw(){try{var p=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Taipei',year:'numeric',month:'2-digit',day:'2-digit'});return p.format(new Date())}catch(e){var n=new Date(Date.now()+8*3600*1000);return n.toISOString().slice(0,10)}}var K='us_talk_visit_date',D=tw(),last='';try{last=localStorage.getItem(K)||''}catch(e){}var inc=last!==D?'1':'0';function render(t,c){document.querySelectorAll('[data-visit-count="total"]').forEach(function(b){b.textContent=(t==null?'—':t)});document.querySelectorAll('[data-visit-count="today"]').forEach(function(b){b.textContent=(c==null?'—':c)})}function fb(){try{var t=parseInt(localStorage.getItem('us_talk_total')||'0',10)||0,d=localStorage.getItem('us_talk_daily')||'',n=parseInt(localStorage.getItem('us_talk_daily_n')||'0',10)||0;if(d!==D){d=D;n=0}if(inc==='1'){t+=1;n+=1;try{localStorage.setItem(K,D);localStorage.setItem('us_talk_total',String(t));localStorage.setItem('us_talk_daily',d);localStorage.setItem('us_talk_daily_n',String(n))}catch(e){}}render(t,n)}catch(e){}}fetch('/api/visits?inc='+inc).then(function(r){return r.json()}).then(function(j){if(j&&typeof j.total==='number'){render(j.total,j.today);if(inc==='1'){try{localStorage.setItem(K,D)}catch(e){}}}else{fb()}}).catch(fb)})();
+</script>
+</body>
+</html>
